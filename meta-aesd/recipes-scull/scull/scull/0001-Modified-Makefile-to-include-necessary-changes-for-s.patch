@@ -1,0 +1,30 @@
+From bd48627b891c2f724c44f0c7beba8eec5241e5a6 Mon Sep 17 00:00:00 2001
+From: xcoponet <xavier.coponet@laposte.net>
+Date: Thu, 18 Apr 2024 16:05:36 +0200
+Subject: [PATCH] Modified Makefile to include necessary changes for scull
+ module
+
+---
+ Makefile | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 7b08c49..4f45ac1 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,11 @@
+ 
+-SUBDIRS =  misc-progs misc-modules \
+-           skull scull scullc scullp lddbus sculld scullv shortprint simple tty \
+-	   pci usb\
+-	   sbull snull short
++# SUBDIRS =  misc-progs misc-modules \
++#            skull scull scullc scullp lddbus sculld scullv shortprint simple tty \
++# 	   pci usb\
++# 	   sbull snull short
++
++SUBDIRS =  misc-modules \
++           scull
+ 
+ all: subdirs
+ 
