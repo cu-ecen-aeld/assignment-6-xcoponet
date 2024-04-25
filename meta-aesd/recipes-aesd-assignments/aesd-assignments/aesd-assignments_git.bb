@@ -11,7 +11,7 @@ SRC_URI = "git://github.com/cu-ecen-aeld/assignments-3-and-later-xcoponet.git;pr
 
 PV = "1.0+git${SRCPV}"
 # set to reference a specific commit hash in your assignment repo
-SRCREV = "46cbdd5770e4d9557ff4827bac03c9d6052e34b6"
+SRCREV = "094e31d4d5108b7ff4157835f83f5cb4afb367f8"
 
 DEPENDS += "libgcc"
 RDEPENDS_${PN} += "libgcc"
@@ -29,6 +29,7 @@ FILES:${PN} += "${bindir}/aesdsocket"
 # customize these as necessary for any libraries you need for your application
 # (and remove comment)
 TARGET_LDFLAGS += "-pthread -lrt"
+TARGET_CFLAGS += "-DUSE_AESD_CHAR_DEVICE"
 
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME:${PN} = "aesdsocket-start-stop"
