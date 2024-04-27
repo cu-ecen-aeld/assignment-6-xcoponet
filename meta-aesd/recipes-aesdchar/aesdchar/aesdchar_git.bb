@@ -11,7 +11,7 @@ SRC_URI = "git://github.com/cu-ecen-aeld/assignments-3-and-later-xcoponet.git;pr
 
 PV = "1.0+git${SRCPV}"
 # set to reference a specific commit hash in your assignment repo
-SRCREV = "094e31d4d5108b7ff4157835f83f5cb4afb367f8"
+SRCREV = "5241aa51ad7ad24955ca0c12332259b28788a92f"
 
 SRC_URI += "file://init_aesdchar.sh"
 
